@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RENMA | Pure Puff</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* Product Hover Effects */
+
+.product-card{
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.product-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+/* Newsletter */
+
+.newsletter{
+
+background:linear-gradient(
+135deg,
+#16a34a,
+#34d399
+);
+
+padding:80px 20px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.newsletter h2{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.newsletter p{
+
+font-size:18px;
+
+margin-bottom:25px;
+
+}
+
+.newsletter input{
+
+width:320px;
+
+max-width:90%;
+
+padding:15px;
+
+border:none;
+
+border-radius:50px;
+
+margin-right:10px;
+
+}
+
+.newsletter button{
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#16a34a;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+/* Footer */
+
+.footer{
+
+background:#111827;
+
+color:white;
+
+padding:60px 8%;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.footer h3{
+
+margin-bottom:15px;
+
+}
+
+.footer a{
+
+display:block;
+
+text-decoration:none;
+
+color:#d1d5db;
+
+margin-bottom:10px;
+
+}
+
+.footer a:hover{
+
+color:white;
+
+}
+
+.social-icons{
+
+display:flex;
+
+gap:15px;
+
+font-size:25px;
+
+margin-top:15px;
+
+}
+
+/* Hero Glow */
+
+.hero h1{
+
+text-shadow:
+0 0 10px rgba(255,255,255,.4),
+0 0 20px rgba(255,255,255,.3);
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.newsletter input{
+
+width:100%;
+
+margin-bottom:10px;
+
+}
+
+.newsletter button{
+
+width:100%;
+
+}
+
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fffb;
+color:#222;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:#16a34a;
+}
+
+nav a{
+text-decoration:none;
+margin-left:25px;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#16a34a;
+}
+
+
+.hero{
+height:100vh;
+background:linear-gradient(135deg,#16a34a,#34d399);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+overflow:hidden;
+}
+
+.hero-content{
+max-width:850px;
+padding:20px;
+}
+
+.hero h1{
+font-size:85px;
+}
+
+.hero h2{
+font-size:32px;
+margin:15px 0;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:white;
+color:#16a34a;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+}
+
+.floating-candy{
+position:absolute;
+width:130px;
+animation:float 4s ease-in-out infinite;
+}
+
+.candy1{
+left:5%;
+top:15%;
+}
+
+.candy2{
+right:5%;
+top:25%;
+animation-delay:1s;
+}
+
+.candy3{
+left:15%;
+bottom:10%;
+animation-delay:2s;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-20px);
+}
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:45px;
+color:#16a34a;
+margin-bottom:50px;
+}
+
+.features,
+.products,
+.team{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card,
+.product-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.badge{
+display:inline-block;
+background:#16a34a;
+color:white;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:15px;
+}
+
+.product-card h3{
+margin-bottom:10px;
+color:#16a34a;
+}
+
+.about{
+background:#ecfdf5;
+text-align:center;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+}
+
+#cart{
+position:fixed;
+right:20px;
+top:100px;
+width:320px;
+background:white;
+border-radius:20px;
+padding:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+display:none;
+z-index:9999;
+}
+
+#chatbot{
+position:fixed;
+right:20px;
+bottom:20px;
+width:340px;
+background:white;
+border-radius:20px;
+padding:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+display:none;
+z-index:9999;
+}
+
+.popup-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.close-btn{
+width:35px;
+height:35px;
+border:none;
+border-radius:50%;
+background:#ef4444;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.close-btn:hover{
+background:#dc2626;
+}
+
+#open-cart{
+position:fixed;
+left:20px;
+bottom:20px;
+padding:12px 20px;
+border:none;
+background:#16a34a;
+color:white;
+border-radius:50px;
+cursor:pointer;
+z-index:9999;
+}
+
+#open-chat{
+position:fixed;
+left:20px;
+bottom:80px;
+padding:12px 20px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:50px;
+cursor:pointer;
+z-index:9999;
+}
+
+#cart-items{
+list-style:none;
+padding:0;
+margin:10px 0;
+max-height:200px;
+overflow-y:auto;
+}
+
+#cart-items li{
+padding:8px;
+border-bottom:1px solid #eee;
+}
+
+.chat-input{
+width:100%;
+padding:10px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+#chat-body{
+background:#f3f4f6;
+padding:12px;
+border-radius:10px;
+margin-bottom:10px;
+min-height:80px;
+}
+
+button{
+background:#16a34a;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">RENMA</div>
+
+<nav>
+<a href="#benefits">Benefits</a>
+<a href="#products">Products</a>
+<a href="#future">Future</a>
+<a href="#science">Research</a>
+<a href="#team">Team</a>
+<a href="#store">Store</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<img src="https://via.placeholder.com/130x200?text=Pure+Puff"
+class="floating-candy candy1">
+
+<img src="https://via.placeholder.com/130x200?text=Pure+Puff"
+class="floating-candy candy2">
+
+<img src="https://via.placeholder.com/130x200?text=Pure+Puff"
+class="floating-candy candy3">
+
+<div class="hero-content">
+
+<h1>Pure Puff™</h1>
+
+<h2>Refresh. Breathe. Enjoy.</h2>
+
+<p>
+A wellness-inspired candy by RENMA,
+crafted for freshness, great taste,
+and future-focused confectionery innovation.
+</p>
+
+<a href="#store" class="btn">Shop Now</a>
+
+</div>
+
+</section>
+
+<!-- Why Pure Puff -->
+
+<section id="benefits">
+
+<h2 class="section-title">Why Pure Puff?</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>🌿 Wellness Inspired</h3>
+<p>
+Created with carefully selected ingredients inspired by freshness,
+wellness and everyday enjoyment.
+</p>
+</div>
+
+<div class="card">
+<h3>💨 Fresh Feeling</h3>
+<p>
+Designed to provide a cool and refreshing experience wherever you go.
+</p>
+</div>
+
+<div class="card">
+<h3>🍬 Premium Taste</h3>
+<p>
+A unique combination of flavor, freshness and satisfaction.
+</p>
+</div>
+
+<div class="card">
+<h3>🌱 Clean Lifestyle Concept</h3>
+<p>
+Built around a refreshing lifestyle concept that promotes feeling fresh
+and energized throughout the day.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Current Products -->
+
+<section id="products">
+
+<h2 class="section-title">Current Products</h2>
+
+<div class="products">
+
+<div class="product-card">
+
+<h3>Pure Puff Mint</h3>
+
+<p>
+Our signature mint candy delivering refreshing taste and cool flavor.
+</p>
+
+<br>
+
+<p><strong>₹99</strong></p>
+
+</div>
+
+<div class="product-card">
+
+<h3>Pure Puff Lemon Mint</h3>
+
+<p>
+A vibrant blend of lemon and mint for an exciting flavor experience.
+</p>
+
+<br>
+
+<p><strong>₹99</strong></p>
+
+</div>
+
+<div class="product-card">
+
+<h3>Pure Puff Honey Herb</h3>
+
+<p>
+Honey-inspired sweetness balanced with herbal freshness.
+</p>
+
+<br>
+
+<p><strong>₹119</strong></p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Future Products -->
+
+<section id="future">
+
+<h2 class="section-title">Future Innovations</h2>
+
+<div class="products">
+
+<div class="product-card">
+
+<div class="badge">COMING SOON</div>
+
+<h3>Pure Puff Mood+</h3>
+
+<p>
+A future flavor concept focused on uplifting everyday moments.
+</p>
+
+</div>
+
+<div class="product-card">
+
+<div class="badge">COMING SOON</div>
+
+<h3>Pure Puff Focus+</h3>
+
+<p>
+An innovation concept designed for active lifestyles and productivity.
+</p>
+
+</div>
+
+<div class="product-card">
+
+<div class="badge">COMING SOON</div>
+
+<h3>Pure Puff Calm+</h3>
+
+<p>
+A soothing flavor experience inspired by moments of relaxation.
+</p>
+
+</div>
+
+<div class="product-card">
+
+<div class="badge">COMING SOON</div>
+
+<h3>Pure Puff Energy+</h3>
+
+<p>
+An exciting next-generation candy concept for busy modern consumers.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Science & Research -->
+
+<section id="science">
+
+<h2 class="section-title">Science & Research</h2>
+
+<div class="features">
+
+<div class="card">
+
+<h3>🔬 Ingredient Research</h3>
+
+<p>
+RENMA continuously explores ingredients commonly associated with
+freshness, flavor and consumer wellness experiences.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🧪 Product Development</h3>
+
+<p>
+Every Pure Puff formula undergoes extensive development and refinement.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📊 Consumer Testing</h3>
+
+<p>
+Feedback and testing help us improve every product before launch.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚀 Future Innovation Lab</h3>
+
+<p>
+Our research team explores the future of functional confectionery.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Meet The Team -->
+
+<section id="team">
+
+<h2 class="section-title">Meet The Team</h2>
+
+<div class="team">
+
+<div class="card">
+
+<h3>👨‍💼 Surya Bansal</h3>
+
+<p>
+Founder & CEO
+</p>
+
+<br>
+
+<p>
+Visionary behind RENMA and the Pure Puff product line.
+Focused on building the future of wellness-inspired confectionery.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔬 Research Director</h3>
+
+<p>
+Head of Product Innovation
+</p>
+
+<br>
+
+<p>
+Responsible for ingredient research, testing and future product development.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📈 Marketing Director</h3>
+
+<p>
+Brand Strategy & Growth
+</p>
+
+<br>
+
+<p>
+Driving consumer engagement and market expansion globally.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌎 Business Development</h3>
+
+<p>
+Partnerships & Expansion
+</p>
+
+<br>
+
+<p>
+Building strategic partnerships and international opportunities.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About RENMA -->
+
+<section class="about" id="about">
+
+<h2 class="section-title">About RENMA</h2>
+
+<p>
+
+RENMA is a next-generation confectionery company focused on creating
+innovative candy experiences.
+
+Our flagship product, Pure Puff™, combines premium taste,
+refreshing flavors and future-forward product innovation.
+
+We believe candy can evolve beyond traditional confectionery
+through research, creativity and customer-focused design.
+
+</p>
+
+</section>
+
+<!-- Online Store -->
+
+<section id="store">
+
+<h2 class="section-title">Official Store</h2>
+
+<div class="products">
+
+<div class="product-card">
+
+<h3>Pure Puff Mint</h3>
+
+<p>
+Classic refreshing mint flavor.
+</p>
+
+<br>
+
+<p><strong>₹99</strong></p>
+
+<br>
+
+<button onclick="addToCart('Pure Puff Mint',99)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<h3>Pure Puff Lemon Mint</h3>
+
+<p>
+Refreshing lemon and mint blend.
+</p>
+
+<br>
+
+<p><strong>₹99</strong></p>
+
+<br>
+
+<button onclick="addToCart('Pure Puff Lemon Mint',99)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<h3>Pure Puff Honey Herb</h3>
+
+<p>
+Premium herbal inspired flavor.
+</p>
+
+<br>
+
+<p><strong>₹119</strong></p>
+
+<br>
+
+<button onclick="addToCart('Pure Puff Honey Herb',119)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<h3>Pure Puff Combo Pack</h3>
+
+<p>
+All Pure Puff flavors together.
+</p>
+
+<br>
+
+<p><strong>₹249</strong></p>
+
+<br>
+
+<button onclick="addToCart('Pure Puff Combo Pack',249)">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Shopping Cart -->
+
+<div id="cart">
+
+<div class="popup-header">
+
+<h3>🛒 Shopping Cart</h3>
+
+<button class="close-btn" onclick="closeCart()">
+✖
+</button>
+
+</div>
+
+
+<hr>
+
+<br>
+
+<ul id="cart-items">
+
+</ul>
+
+<br>
+
+<p>
+
+<strong>Total: ₹<span id="cart-total">0</span></strong>
+
+</p>
+
+<br>
+
+<button onclick="checkout()">
+Checkout
+</button>
+
+</div>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="card" style="max-width:700px;margin:auto;">
+
+<h3>📧 Email</h3>
+
+<p>
+hello@renma.com
+</p>
+
+<br>
+
+<h3>📞 Phone</h3>
+
+<p>
++91 XXXXX XXXXX
+</p>
+
+<br>
+
+<h3>📍 Location</h3>
+
+<p>
+India
+</p>
+
+<br>
+
+<h3>🌐 Business Enquiries</h3>
+
+<p>
+partners@renma.com
+</p>
+
+</div>
+
+</section>
+
+<!-- AI Chatbot -->
+
+<div id="chatbot">
+
+<h3 style="color:#16a34a;">
+🤖 RENMA Assistant
+</h3>
+
+<div id="chat-body">
+
+Hello! Welcome to RENMA.
+Ask me about Pure Puff products.
+
+</div>
+
+<input
+type="text"
+id="userInput"
+placeholder="Ask something..."
+style="
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ddd;
+border-radius:8px;
+">
+
+<button onclick="chatReply()">
+Send
+</button>
+
+</div>
+
+<!-- Footer -->
+
+<footer>
+
+<h3>RENMA</h3>
+
+<br>
+
+<p>
+Innovating the future of confectionery.
+</p>
+
+<br>
+
+<p>
+© 2026 RENMA. All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- JavaScript -->
+
+<script>
+
+/* Shopping Cart */
+
+let total = 0;
+
+function addToCart(product, price){
+
+let li = document.createElement("li");
+
+li.innerHTML =
+product + " - ₹" + price;
+
+document
+.getElementById("cart-items")
+.appendChild(li);
+
+total += price;
+
+document
+.getElementById("cart-total")
+.innerHTML = total;
+
+}
+
+/* Checkout */
+
+function checkout(){
+
+if(total === 0){
+
+alert("Your cart is empty.");
+
+return;
+
+}
+
+alert(
+"Thank you for shopping with RENMA!\n\nTotal Amount: ₹" + total
+);
+
+}
+
+/* AI Chatbot */
+
+function chatReply(){
+
+let input =
+document
+.getElementById("userInput")
+.value
+.toLowerCase();
+
+let response =
+"Thank you for contacting RENMA.";
+
+if(input.includes("price")){
+
+response =
+"Our products start from ₹99.";
+
+}
+
+else if(input.includes("mint")){
+
+response =
+"Pure Puff Mint is our most popular flavor.";
+
+}
+
+else if(input.includes("ingredients")){
+
+response =
+"Pure Puff uses carefully selected flavor ingredients and wellness-inspired concepts.";
+
+}
+
+else if(input.includes("future")){
+
+response =
+"Upcoming products include Mood+, Focus+, Calm+ and Energy+.";
+
+}
+
+else if(input.includes("founder")){
+
+response =
+"RENMA was founded by Surya Bansal.";
+
+}
+
+else if(input.includes("research")){
+
+response =
+"Our research team continuously develops innovative confectionery products.";
+
+}
+
+document
+.getElementById("chat-body")
+.innerHTML = response;
+
+document
+.getElementById("userInput")
+.value = "";
+
+}
+
+</script>
+
+<!-- Mobile Responsive -->
+
+<style>
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:55px;
+}
+
+.hero h2{
+font-size:24px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+nav{
+display:none;
+}
+
+#cart{
+position:relative;
+width:100%;
+right:auto;
+top:auto;
+margin-top:30px;
+}
+
+#chatbot{
+width:90%;
+right:5%;
+bottom:10px;
+}
+
+.floating-candy{
+width:80px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+}
+
+</style>
+<button id="open-cart" onclick="openCart()">
+🛒 Cart
+</button>
+
+<div id="cart">
+
+<div class="popup-header">
+
+<h3>Shopping Cart</h3>
+
+<button class="close-btn" onclick="closeCart()">
+✕
+</button>
+
+</div>
+
+<ul id="cart-items"></ul>
+
+<p>
+<strong>Total: ₹<span id="cart-total">0</span></strong>
+</p>
+
+<br>
+
+<button onclick="checkout()">
+Checkout
+</button>
+
+</div>
+<!-- Open Chat Button -->
+
+<button id="open-chat" onclick="openChatbot()">
+🤖 Assistant
+</button>
+
+<!-- RENMA Assistant -->
+
+<div id="chatbot">
+
+<div class="popup-header">
+
+<h3 style="color:#16a34a;">
+🤖 RENMA Assistant
+</h3>
+
+<button
+class="close-btn"
+onclick="closeChatbot()">
+✕
+</button>
+
+</div>
+
+<div id="chat-body">
+
+Hello 👋
+
+Welcome to RENMA.
+
+Ask me about:
+
+• Pure Puff Products
+
+• Pricing
+
+• Ingredients
+
+• Research
+
+• Future Products
+
+• Founder
+
+</div>
+
+<input
+type="text"
+id="userInput"
+class="chat-input"
+placeholder="Ask a question..."
+>
+
+<button onclick="chatReply()">
+Send
+</button>
+
+</div>
+
+<script>
+
+/* Shopping Cart */
+
+let total = 0;
+
+function addToCart(product, price){
+
+let item = document.createElement("li");
+
+item.innerHTML =
+product + " - ₹" + price;
+
+document
+.getElementById("cart-items")
+.appendChild(item);
+
+total += price;
+
+document
+.getElementById("cart-total")
+.innerHTML = total;
+
+}
+
+/* Cart Controls */
+
+function openCart(){
+
+document
+.getElementById("cart")
+.style.display = "block";
+
+}
+
+function closeCart(){
+
+document
+.getElementById("cart")
+.style.display = "none";
+
+}
+
+/* Chatbot Controls */
+
+function openChatbot(){
+
+document
+.getElementById("chatbot")
+.style.display = "block";
+
+}
+
+function closeChatbot(){
+
+document
+.getElementById("chatbot")
+.style.display = "none";
+
+}
+
+/* Checkout */
+
+function checkout(){
+
+if(total === 0){
+
+alert(
+"Your shopping cart is empty."
+);
+
+return;
+
+}
+
+alert(
+"Thank you for shopping with RENMA.\n\nTotal Amount: ₹" + total
+);
+
+}
+
+/* AI Assistant */
+
+function chatReply(){
+
+let input =
+document
+.getElementById("userInput")
+.value
+.toLowerCase();
+
+let response =
+"Thank you for contacting RENMA.";
+
+if(input.includes("price")){
+
+response =
+"Pure Puff products start from ₹99.";
+
+}
+
+else if(input.includes("mint")){
+
+response =
+"Pure Puff Mint is our flagship refreshing candy.";
+
+}
+
+else if(input.includes("ingredient")){
+
+response =
+"Pure Puff uses carefully selected flavor ingredients and wellness-inspired concepts.";
+
+}
+
+else if(input.includes("research")){
+
+response =
+"Our research team focuses on ingredient innovation, flavor development and consumer testing.";
+
+}
+
+else if(input.includes("future")){
+
+response =
+"Upcoming concepts include Mood+, Focus+, Calm+ and Energy+.";
+
+}
+
+else if(input.includes("founder")){
+
+response =
+"RENMA was founded by Surya Bansal.";
+
+}
+
+else if(input.includes("team")){
+
+response =
+"Our team includes experts in research, innovation, marketing and business development.";
+
+}
+
+else if(input.includes("hello")){
+
+response =
+"Hello 👋 Welcome to RENMA.";
+
+}
+
+document
+.getElementById("chat-body")
+.innerHTML = response;
+
+document
+.getElementById("userInput")
+.value = "";
+
+}
+
+</script>
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>RENMA</h3>
+
+<p>
+
+Creating the future of confectionery through innovation,
+research and premium experiences.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Products</h3>
+
+<a href="#">Pure Puff Mint</a>
+
+<a href="#">Pure Puff Lemon Mint</a>
+
+<a href="#">Pure Puff Honey Herb</a>
+
+<a href="#">Future Innovations</a>
+
+</div>
+
+<div>
+
+<h3>Company</h3>
+
+<a href="#about">About</a>
+
+<a href="#science">Research</a>
+
+<a href="#team">Team</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+<div>
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+
+<span>📘</span>
+
+<span>📸</span>
+
+<span>🐦</span>
+
+<span>▶️</span>
+
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<hr>
+
+<br>
+
+<p style="text-align:center;">
+
+© 2026 RENMA. All Rights Reserved.
+
+</p>
+
+</footer>
+</body>
+
+</html>
